@@ -1,0 +1,13 @@
+[Unit]
+Description=ProDJLink MIDI Service
+After=network.target
+
+[Service]
+ExecStart=/home/jonas/python-prodj-link/run-prodjlinkmidi.sh
+WorkingDirectory=/home/jonas/python-prodj-link/
+User=jonas
+Group=jonas
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
